@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block title%} login {%endblock%}
+{%block content%}
+<form  method="POST" action="">
+    {%csrf_token%}
+    <label>username</label>
+    <input type="text" name="username" placeholder="username..." />
+
+    <label>password</label>
+    <input type="text" name="password" placeholder="password..."/>
+
+    <input type="submit" value="login" />
+    <p> dont have an account? <a href="{% url 'register'%}">create account</a></p>
+</form>
+{%endblock%}

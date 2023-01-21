@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block title%}
+PhoneBook-home
+{%endblock%}
+
+{%block content%}
+{%if request.user.is_authenticated%}
+<div class="title-wrapper">
+    <h1>Welcome {{request.user|upper}}</h1>
+</div>
+
+{%else%}
+<div class="title-wrap">
+    <h1> Welcome to PhoneBook</h1>
+    
+    <p><h4> start your operations by managing contacts</h4></p>
+</div>
+
+{%endif%}
+
+{%endblock%}
