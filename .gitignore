@@ -1,0 +1,6 @@
+templates
+env/
+contacts\__pycache__/
+db.sqlite3
+templates
+migrations

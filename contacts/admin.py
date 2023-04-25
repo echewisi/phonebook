@@ -1,7 +1,17 @@
 from django.contrib import admin
-from .models import Contact, Individual
+from . import models
 
-admin.site.register(Contact)
-admin.site.register(Individual)
+@admin.register(models.Individual)
+class PersonalContact(admin.ModelAdmin):
+    list_display=[
+        'contact',
+    ]
 
+@admin.register(models.Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display=[
+        'name',
+        'number',
+        'email',
+    ]
 # Register your models here.

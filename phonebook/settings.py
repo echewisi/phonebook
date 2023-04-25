@@ -38,10 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'contacts.apps.ContactsConfig',
+    'phonenumber_field',
+    'rest_framework',
+
 ]
 
 AUTH_USER_MODEL= 'contacts.Individual'
-AUTHENTICATION_BACKENDS=['django.contrib.auth.backends.ModelBackend']
+# AUTHENTICATION_BACKENDS=['django.contrib.auth.backends.ModelBackend']
 
 
 
